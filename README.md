@@ -4,6 +4,12 @@ A basic App using Node.js, express, sequelize, ejs, mysql.
 The main focus of the app is to be able to create a user, (register) add a gig, log in, use passport authentication, be able to display data from database.
 
 # Requirements
+npm install
+
+Copy env.example and rename it to .env
+
+Adjust the variables in .env to correspond your needs.
+
 Requires one databese, with (currently) two tables.
 
 The gigs table
