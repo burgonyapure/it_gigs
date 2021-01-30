@@ -1,0 +1,70 @@
+<div class="row mt-5">
+    <div class="col-md-6 m-auto">
+      <div class="card card-body">
+        <h1 class="text-center mb-3">
+          Add a new Gig
+        </h1>
+        <%- include('partials/messages'); %>
+        <form action="/gigs/add" method="POST">
+          <div class="form-group">
+            <label for="title">Title of Gig</label>
+            <input
+              type="text"
+              id="title"
+              name="title"
+              class="form-control"
+              placeholder="Enter Gig Title"
+              value="<%= typeof title != 'undefined' ? title : '' %>"
+            />
+          </div>
+          <div class="form-group">
+            <label for="description">Description</label>
+            <textarea
+              type="text"
+              id="description"
+              name="description"
+              class="form-control"
+              placeholder="Describe the gig"
+              value="<%= typeof description != 'undefined' ? description: '' %>"
+            ></textarea>
+          </div>
+          <div class="form-group">
+            <label for="technologies">Required Technologies</label>
+            <input
+              type="text"
+              id="technologies"
+              name="technologies"
+              class="form-control"
+              placeholder="eg. javascript, react, PHP"
+              value="<%= typeof technologies != 'undefined' ? technologies : '' %>"
+            />
+          </div>
+          <div class="form-group">
+            <label for="budget">Budget</label>
+            <input
+              type="number"
+              id="budget"
+              name="budget"
+              class="form-control"
+              placeholder="Budget"
+              value="<%= typeof budget != 'undefined' ? budget : '' %>"
+            />
+          </div>
+          <div class="form-group">
+            <label for="contact">Contact Email</label>
+            <input
+              type="email"
+              id="contact"
+              name="contact_email"
+              class="form-control"
+              placeholder="Contact email"
+              value="<%= typeof contact_email != 'undefined' ? contact_email : '' %>"
+            />
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">
+            Add the Gig
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,15 @@
+<h1>All Gigs</h1>
+    <% for (let i = 0; i < gigs.length; i++) { %>
+      <div class="card mb-2 <%= gigs[i].available ? 'bg-success' : '' %>">
+        <div class="card-body">
+            <h5 class="card-title"><%= gigs[i].title %></h5>
+            <h6 class="card-subtitle mb-2 text-muted">Technologies Needed: <span><%= gigs[i].technologies %></span></small></h6>
+            <p class="card-text"><%= gigs[i].description %></p>
+            <p class="text-strong">Budget: <%= gigs[i].budget %></p>
+            <a href="mailto:<%= gigs[i].contact_email %>" class="btn btn-reverse">Apply Now</a>
+        </div>  
+    </div>
+    <% } %>
+    <% if (gigs.length === 0) { %>
+      <p>No gigs available</p>
+    <% } %>

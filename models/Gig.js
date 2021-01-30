@@ -16,6 +16,9 @@ const Gig = db.define('gig', {
     },
     contact_email:{
         type: Sequlize.STRING
+    },
+    available:{
+        type: Sequlize.BOOLEAN
     }
 })
 

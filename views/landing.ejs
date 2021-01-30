@@ -1,12 +1,13 @@
-<div class="row mt-5">
-    <div class="col-md-6 m-auto">
-      <div class="card card-body text-center">
-        <h1><i class="fab fa-node-js fa-3x"></i></h1>
-        <p>Create an account or login</p>
-        <a href="/users/register" class="btn btn-primary btn-block mb-2"
-          >Register</a
-        >
-        <a href="/users/login" class="btn btn-secondary btn-block">Login</a>
+<div class="row" style="height:80%;">
+  <div class="col-sm-12 my-auto">
+    <h1 class="text-center">Find A Coding Gig</h1>
+    <form action="/gigs/search" class="form-group">
+      <div class="input-group">
+        <input class="form-control" type="search" name="term" placeholder="Javascript, PHP, Rails, etc..." required><span class="input-group-btn"></span>
+        <button class="btn btn-info" type="submit">
+          <i class="glyphicon glyphicon-search" aria-hidden="true"></i> Search
+        </button>
       </div>
-    </div>
+    </form>
   </div>
+</div>

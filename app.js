@@ -27,6 +27,7 @@ try {
 catch (error) {
     console.error('Unable to connect to the database:', error);
 }
+
 //4 ejs
 app.use(expressLayouts);
 app.set('view engine', 'ejs');
@@ -50,11 +51,13 @@ app.use((req, res, next) => {
     res.locals.success_msg = req.flash('success_msg');
     res.locals.error_msg = req.flash('error_msg');
     res.locals.error = req.flash('error');
+    res.locals.user = req.isAuthenticated();
     next();
 })
 
 //routes
 app.use('/',require('./routes/index'));
 app.use('/users', require('./routes/users'));
+app.use('/gigs', require('./routes/gigs'));
 
 app.listen(PORT, console.log(`started at ${PORT}`));
